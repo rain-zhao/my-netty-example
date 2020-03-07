@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+//生成文件所在包名
+option java_package = "protobuf.bean";
+//生成的java文件名
+//option java_outer_classname = "SearchRequest";
+
+
+message SampleMessage {
+    oneof test_oneof {
+        string name = 4;
+        string sub_message = 9;
+    }
+}
