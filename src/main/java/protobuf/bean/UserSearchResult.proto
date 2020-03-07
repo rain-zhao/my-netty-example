@@ -1,0 +1,9 @@
+syntax = "proto3";
+package protoBuf.bean;
+
+import "User.proto";
+
+message UserSearchResult {
+    int32 size = 1;
+    map<string, User> data = 2;
+}

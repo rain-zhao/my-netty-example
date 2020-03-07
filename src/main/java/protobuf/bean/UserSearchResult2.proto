@@ -1,0 +1,13 @@
+syntax = "proto3";
+package protoBuf.bean;
+
+import "User.proto";
+
+message UserSearchResult2{
+    int32 size = 1;
+    message entry {
+        string key = 10;
+        User value = 20;
+    }
+    repeated entry data = 2;
+}
