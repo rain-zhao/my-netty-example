@@ -1,6 +1,5 @@
-package protobuf;
-
 import com.google.protobuf.InvalidProtocolBufferException;
+import org.junit.Test;
 import protobuf.bean.SampleMessageOuterClass;
 import protobuf.bean.SearchRequestOuterClass;
 
@@ -9,13 +8,8 @@ import protobuf.bean.SearchRequestOuterClass;
  */
 public class ReadWriteDemo {
 
-    public static void main(String[] args) throws InvalidProtocolBufferException {
-//        test1();
-        test2();
-
-    }
-
-    public static void test1() throws InvalidProtocolBufferException {
+    @Test
+    public void test1() throws InvalidProtocolBufferException {
 
         //类构造器
         SearchRequestOuterClass.SearchRequest.Builder builder = SearchRequestOuterClass.SearchRequest.newBuilder();
@@ -34,7 +28,8 @@ public class ReadWriteDemo {
 
     }
 
-    public static void test2(){
+    @Test
+    public void test2(){
         SampleMessageOuterClass.SampleMessage.Builder builder = SampleMessageOuterClass.SampleMessage.newBuilder();
 
         System.out.println("testoneofcase:"+builder.getTestOneofCase().toString());
